@@ -1,6 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)Dockerfile$"],
+      "matchStrings": ["ENV HADOLINT_COMMIT=(?<currentDigest>[0-9a-f]{40})"],
+      "currentValueTemplate": "master",
+      "depNameTemplate": "hadolint-commit",
+      "packageNameTemplate": "https://github.com/hadolint/hadolint",
+      "datasourceTemplate": "git-refs"
+    }
   ]
 }
