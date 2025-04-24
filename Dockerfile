@@ -1,4 +1,4 @@
-FROM haskell:9.8.4-slim-bullseye AS builder
+FROM haskell:9.10.1-slim-bullseye AS builder
 
 ENV HADOLINT_COMMIT=28fc39f92e2768d8cc9f94d6e2fc16bd4397f092
 ENV INSTALL_DIR=/opt/hadolint/bin
