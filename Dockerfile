@@ -1,6 +1,6 @@
 FROM haskell:9.10.2-slim-bullseye AS builder
 
-ENV HADOLINT_COMMIT=c4184b2cd5adc334d4b82aa420e12ac0f43db7cc
+ENV HADOLINT_COMMIT=aa6bb0c83a0d646e0403935df5c39a7ad0b54ea2
 ENV INSTALL_DIR=/opt/hadolint/bin
 RUN mkdir -p $INSTALL_DIR
 RUN apt-get update \
